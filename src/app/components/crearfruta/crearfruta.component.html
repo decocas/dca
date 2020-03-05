@@ -1,0 +1,60 @@
+<br>
+    <br>
+    <br>
+    <br>
+<div class="container-fluid" >
+    <div class="row">
+        <h3>Registrar una fruta nueva</h3>
+        <hr>
+    </div>
+    <div class="shadow p-1 mb-4 bg-primary square">
+        <form  [formGroup]="formGroup" (ngSubmit)="agregar()"  > <!--formulario-->
+            <div class="form-group ">
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <label class="text-white" for="name"><h5>Nombre: </h5></label>
+                        <input type="text" class="form-control" formControlName="nombre" id="name"  required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="text-white" for="code"><h5>Id: </h5></label>
+                        <input type="text" class="form-control" formControlName="id"  id="code" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="text-white" for="precio"><h5>Precio: </h5></label>
+                        <input type="number" min="0"class="form-control"  formControlName="valor" id="precio" required>
+                    </div>    
+              </div>                                       
+            </div>
+            <div class="form-action-row">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="sumbit" class="btn btn-sm"   style="align-content: flex-end; align-items: center;" >
+                        <i class="material-icons" style="font-size: 38px; background-attachment: fixed; background-color: white;">
+                            save
+                        </i>
+                      </button> 
+                       <button  type="reset"  class="btn btn-sm"  style="align-content: flex-end; align-items: center;" >
+                           <i class="material-icons" style="font-size: 38px; background-attachment: fixed; background-color: white;">
+                               clear
+                           </i>
+                       </button>   
+                </div>
+              </div>
+        </form>
+    </div> 
+    
+    <footer>
+        <div class="shadow p-1 mb-4 bg-light rounded">
+            <ul class="list-group">
+                <a class="list-group-item-action" *ngFor="let f of f.listaFrutas">
+                    <span class="text-primary"><h4>{{f.nombre| uppercase }}     {{f.valor }}</h4></span>
+                </a>
+            </ul>
+
+        </div>
+       
+    </footer>
+
+</div>
+
+
+ 
