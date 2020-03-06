@@ -1,21 +1,45 @@
 <div class="container-fluid">
   <nav class="navbar fixed-top navbar-light bg-light">
     <a class="navbar-brand"  >
-      <img src="../favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-      
-    </a>
+      <img  src="https://www.kindpng.com/picc/m/70-705578_manage-loading-with-angular-material-progress-bars-angular.png" width="40" height="30" class="d-inline-block align-top" alt="">
+     </a>
     <div class="nav justify-content-end">
       <ul class="nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active"></li>
-        <a class="nav-link"  role="button" routerLink="crearfruta" (click)="goCrear()">
-          <i class="material-icons" style="font-size: 30px; ">
-          add
-          </i></a>
-         
-      </ul>    
-
+        <li class="nav-item active">       
+          <a class="nav-link"  role="button" routerLink="crearfruta" (click)="goCrear()">
+            <i class="material-icons" style="font-size: 30px; ">
+            add
+            </i>
+          </a>          
+        </li>
+        <li class="nav-item active">       
+          <a class="nav-link" href=""  role="button" (click)="back()">
+            <i class="material-icons" style="font-size: 30px; ">
+            home
+            </i>
+          </a>          
+        </li>
+      </ul>     
     </div>
      </nav>
+<br>
+<br>
+<br>
+<footer>
+  <div class="col">
+    <figure class="figure" style="text-align: justify;">
+      <img src="https://www.kindpng.com/picc/m/70-705578_manage-loading-with-angular-material-progress-bars-angular.png" alt="Responsive image" height="600" width="300" class="figure-img img-fluid rounded">
+      <figcaption class="figure-caption"> <h2>Bienvenidos</h2></figcaption>
+    </figure>
+
+  </div>
+
+</footer>     
+
+
+
+
+
     
 </div>
 <router-outlet></router-outlet>

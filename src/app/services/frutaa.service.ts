@@ -5,11 +5,12 @@ import { Fruta } from '../models/fruta';
   providedIn: 'root'
 })
 export class FrutaaService {
-  fruta:Fruta;
+  
   listaFrutas:Fruta[];
+  toggle = true;// bandera para el pipe
   constructor() { }
 
-  add(fruta:any){
+  add(fruta:any){// agreagr al arreglo
     this.listaFrutas.push(fruta);
   }
 

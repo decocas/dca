@@ -7,6 +7,7 @@ import { CrearfrutaComponent } from './components/crearfruta/crearfruta.componen
 
 import { FrutaaService } from './services/frutaa.service';
 import { ReactiveFormsModule } from '@angular/forms';
+ 
 @NgModule({
   declarations: [
     AppComponent,
