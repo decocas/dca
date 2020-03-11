@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private r:Router,private l:Location){
+  constructor(private r:Router){
 
   }
   title = 'dca-example';
@@ -16,8 +16,8 @@ export class AppComponent {
         this.r.navigate(['/crearfruta']);
     }
 
-    back(){ //redireccionar ultima pagina
-      this.l.back();
+    back(){ //redireccionar inicio
+      this.r.navigate(['']);
     }
      
  

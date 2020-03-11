@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FrutaaService } from 'src/app/services/frutaa.service';
 import {  FormBuilder, Validators } from '@angular/forms'; 
 import { FormGroup}from '@angular/forms';
+import { Fruta } from 'src/app/models/fruta';
  
  
 @Component({
@@ -11,6 +12,7 @@ import { FormGroup}from '@angular/forms';
 })
 export class CrearfrutaComponent implements OnInit {
   formGroup: FormGroup;
+  listaFruta:Fruta[];
   constructor(public f:FrutaaService,// para injection de dependencia
     private formBuilder: FormBuilder) { }
 
@@ -19,9 +21,14 @@ export class CrearfrutaComponent implements OnInit {
           nombre:['',Validators.required],
           id:['',Validators.required],
           valor:[0,Validators.required] //validar negativo
-  })
+  });
   
-  this.f.listaFrutas=new Array();
+  this.getListaFruta(); 
+}
+
+  getListaFruta(){
+    this.f.getfrutas()
+    .subscribe(listaFruta=> this.listaFruta=listaFruta);
   }
 
   agregar( ){
@@ -33,8 +40,6 @@ export class CrearfrutaComponent implements OnInit {
        this.formGroup.reset();
  } }
 
- get format()   { return this.f.toggle ? 'USD' : 'EUR'; } // control para la moneda
- toggleFormat() { this.f.toggle = !this.f.toggle;  }//manejo del boton del pipe
-
+ 
 
 }

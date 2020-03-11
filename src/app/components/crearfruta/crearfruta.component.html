@@ -42,14 +42,12 @@
         </form>
     </div> 
     
-    <footer>
+    <footer class="grid grid-pad">
         <div class="shadow p-1 mb-4 bg-light rounded">
-            <ul class="list-group">
-                   <a class="list-group-item-action" *ngFor="let f of f.listaFrutas">
-                        <span class="text-primary"><h4>{{f.nombre| uppercase }}     {{f.valor|currency:format }}</h4></span>
-                        <button  role="button" (click)="toggleFormat()" class="material-icons" style="font-size: 30px; ">
-                            replay
-                        </button>
+            <ul class="list-group" *ngFor="let f of listaFruta">
+                   <a class="list-group-item-action "  routerLink="/detalle/{{f.id}}">
+                        <span class="text-primary"><h4>{{f.nombre| uppercase }}  {{f.valor| uppercase }}</h4> </span>
+                        
                     </a>
                               
             </ul>
